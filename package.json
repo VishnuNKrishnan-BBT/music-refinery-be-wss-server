@@ -1,0 +1,19 @@
+{
+  "name": "musicrefinerybe-wss",
+  "version": "1.0.0",
+  "description": "Web socket server for Music Refinery Front End Client",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/server.mjs"
+  },
+  "author": "Vishnu Navaneeth Krishnan",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.7.7",
+    "crypto": "^1.0.1",
+    "fluent-ffmpeg": "^2.1.3",
+    "redis": "^4.7.0",
+    "ws": "^8.18.0"
+  }
+}
