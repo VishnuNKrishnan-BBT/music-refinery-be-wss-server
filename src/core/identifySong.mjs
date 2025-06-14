@@ -1,4 +1,4 @@
-// import 'dotenv/config'
+import 'dotenv/config'
 import fs from 'fs'
 import crypto from 'crypto'
 import axios from 'axios'
