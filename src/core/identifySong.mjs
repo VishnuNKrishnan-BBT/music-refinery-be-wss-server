@@ -11,9 +11,9 @@ import { ProgressResponse } from '../constructors/progressResponse.mjs'
 
 export const identifySong = (ws = null, path, session, entryIndex = 0) => {
     //Available in .env. But unreadable here.
-    const ACCESS_KEY = 'b0b8501ec81c37213d9d5afff040431e'
-    const ACCESS_SECRET = 'zdGrjxh0A9vxnvw8QJeeU7sYVuCG2aeSIPwMM7ay'
-    const ENDPOINT = 'https://identify-ap-southeast-1.acrcloud.com/v1/identify'
+    const ACCESS_KEY = process.env.MUSIC_IDENTIFICATION_SERVICE_ACCESS_KEY
+    const ACCESS_SECRET = process.env.MUSIC_IDENTIFICATION_SERVICE_ACCESS_SECRET
+    const ENDPOINT = process.env.MUSIC_IDENTIFICATION_SERVICE_URL
 
     return new Promise(async (resolve, reject) => {
         //Filename

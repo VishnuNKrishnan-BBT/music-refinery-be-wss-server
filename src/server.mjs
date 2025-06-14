@@ -56,7 +56,7 @@ wss.on('connection', (ws) => {
 
                     for (let [index, song] of listToIdentify.entries()) {
                         // Wait for the current song to be identified before continuing
-                        await identifySong(ws, `https://music-refinery-app-bucket.s3.ap-south-1.amazonaws.com/${song.origFileTempUrl}`, 'SES4938299', index);
+                        await identifySong(ws, `${process.env.MUSIC_REFINERY_STORAGE_BUCKET_BASE_URL}/${song.origFileTempUrl}`, 'SES4938299', index);
                     }
                 }
             })
