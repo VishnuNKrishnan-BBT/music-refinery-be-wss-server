@@ -76,7 +76,6 @@ export const identifySong = (ws = null, path, session, entryIndex = 0) => {
                                 } else {
                                     const formattedAudioInfo = new ServiceResponseAdaptor(response.data).getFormatted()
                                     //console.log(formattedAudioInfo);
-                                    console.log(JSON.stringify(response.data, null, 4));
                                     console.log(`-- Media identified!`)
                                     console.table(formattedAudioInfo)
                                     ws.send(JSON.stringify(new ProgressResponse(entryIndex, 7, formattedAudioInfo, null)))
