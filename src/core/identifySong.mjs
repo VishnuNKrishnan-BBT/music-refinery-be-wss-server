@@ -77,7 +77,7 @@ export const identifySong = (ws = null, path, session, entryIndex = 0) => {
                                     const formattedAudioInfo = new ServiceResponseAdaptor(response.data).getFormatted()
                                     //console.log(formattedAudioInfo);
                                     console.log(`-- Media identified!`)
-                                    console.table(formattedAudioInfo)
+                                    console.log(formattedAudioInfo)
                                     ws.send(JSON.stringify(new ProgressResponse(entryIndex, 7, formattedAudioInfo, null)))
                                     resolve(new TaskResponse(null, 'IDENTIFY MEDIA').success('Media identified!', formattedAudioInfo))
                                 }
